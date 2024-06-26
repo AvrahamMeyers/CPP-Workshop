@@ -1,10 +1,9 @@
 #include <iostream>
-using namespace std;
 
 #include "Rational.h"
 
 void Rational::print() {
-	cout << numerator << '/' << denominator;
+	std::cout << numerator << '/' << denominator;
 }
 
 bool Rational::equal(Rational r) {

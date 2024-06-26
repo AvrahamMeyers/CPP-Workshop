@@ -8,37 +8,37 @@ Created and Modified on 3.8.21
 
 #include"Rational.h"
 #include <iostream>
-using namespace std;
+//using namespace std;
 
 int main()
 {
 	int numerator, denominator;
 	char tav;
-	cout << "enter two rational numbers:" << endl;
-	cin >> numerator >> tav >> denominator;
+	std::cout << "enter two rational numbers:" << std::endl;
+	std::cin >> numerator >> tav >> denominator;
 	Rational r1;
 	r1.SetNum(numerator);
 	r1.SetDenom(denominator);
-	cin >> numerator >> tav >> denominator;
+	std::cin >> numerator >> tav >> denominator;
 	Rational r2;
 	r2.SetNum(numerator);
 	r2.SetDenom(denominator);
 	Rational ans = r1.Add(r2);
 	r1.print();
-	cout << " + ";
+	std::cout << " + ";
 	r2.print();
-	cout << " = ";
+	std::cout << " = ";
 	ans.print();
-	cout << endl;
+	std::cout << std::endl;
 	if (r1.equal(r2))
-		cout << "The two numbers are equal" << endl;
+		std::cout << "The two numbers are equal" << std::endl;
 	else
 	{
-		cout << "The two numbers are different" << endl;
+		std::cout << "The two numbers are different" << std::endl;
 		r1.print();
-		cout << ' ';
+		std::cout << ' ';
 		r2.print();
-		cout << endl;
+		std::cout << std::endl;
 	}
 	return 0;
 }
