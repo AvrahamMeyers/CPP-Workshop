@@ -1,7 +1,0 @@
-﻿  Point.cpp
-C:\Users\a3210\source\repos\HW2Q1\HW2Q1\Point.cpp(10,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\a3210\source\repos\HW2Q1\HW2Q1\Point.cpp(11,17): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  Polygon.cpp
-  PolygonMain.cpp
-  Generating Code...
-  HW2Q1.vcxproj -> C:\Users\a3210\source\repos\HW2Q1\Debug\HW2Q1.exe

@@ -1,3 +1,0 @@
-﻿  QueueStackMain.cpp
-C:\Users\a3210\source\repos\CPPHW8Q2\CPPHW8Q2\ListTemplate.h(195): warning C4715: 'List<int>::firstElement': not all control paths return a value
-  CPPHW8Q2.vcxproj -> C:\Users\a3210\source\repos\CPPHW8Q2\Debug\CPPHW8Q2.exe
