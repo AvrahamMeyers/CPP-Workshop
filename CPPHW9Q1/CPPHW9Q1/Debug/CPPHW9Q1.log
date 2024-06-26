@@ -1,0 +1,40 @@
+﻿  TreeMain.cpp
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\Tree.h(152,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\Tree.h(150): message : while compiling class template member function 'void Tree<T>::BreadthScan(void)'
+          with
+          [
+              T=int
+          ]
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\TreeMain.cpp(61): message : see reference to function template instantiation 'void Tree<T>::BreadthScan(void)' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\SearchTree.h(7): message : see reference to class template instantiation 'Tree<T>' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\TreeMain.cpp(16): message : see reference to class template instantiation 'SearchTree<int>' being compiled
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\SearchTree.h(217,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\SearchTree.h(210): message : while compiling class template member function 'void SearchTree<int>::deleteDuplicateNodes(Tree<T>::Node *)'
+          with
+          [
+              T=int
+          ]
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\SearchTree.h(207): message : see reference to function template instantiation 'void SearchTree<int>::deleteDuplicateNodes(Tree<T>::Node *)' being compiled
+          with
+          [
+              T=int
+          ]
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\SearchTree.h(33): message : while compiling class template member function 'void SearchTree<int>::add(T)'
+          with
+          [
+              T=int
+          ]
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\CPPHW9Q1\TreeMain.cpp(22): message : see reference to function template instantiation 'void SearchTree<int>::add(T)' being compiled
+          with
+          [
+              T=int
+          ]
+  CPPHW9Q1.vcxproj -> C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW9Q1\Debug\CPPHW9Q1.exe

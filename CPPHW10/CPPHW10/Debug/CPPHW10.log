@@ -1,0 +1,7 @@
+﻿  GuardianoftheWallsMain.cpp
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW10\CPPHW10\Private.h(47,13): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW10\CPPHW10\GuardianoftheWallsMain.cpp(62,9): warning C4834: discarding return value of function with 'nodiscard' attribute
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW10\CPPHW10\GuardianoftheWallsMain.cpp(135,22): warning C4101: 'Msg': unreferenced local variable
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW10\CPPHW10\GuardianoftheWallsMain.cpp(46): warning C4715: '<lambda_bdb1d96d744c49ff2a22566679bd71f5>::operator()': not all control paths return a value
+C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW10\CPPHW10\GuardianoftheWallsMain.cpp(63): warning C4715: '<lambda_3228e2f54f078eee2707970faa883f4b>::operator()': not all control paths return a value
+  CPPHW10.vcxproj -> C:\Users\a3210\Machon Lev\Year 1\Semester B\CPP Workshop\Homeworks\CPPHW10\Debug\CPPHW10.exe

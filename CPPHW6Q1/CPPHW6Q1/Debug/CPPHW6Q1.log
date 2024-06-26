@@ -1,0 +1,4 @@
+﻿  EmployeeMain.cpp
+C:\Users\a3210\source\repos\CPPHW6Q1\CPPHW6Q1\FullTime.h(17,34): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW6Q1\CPPHW6Q1\FullTime.h(22,29): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  CPPHW6Q1.vcxproj -> C:\Users\a3210\source\repos\CPPHW6Q1\Debug\CPPHW6Q1.exe

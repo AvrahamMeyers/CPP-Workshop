@@ -1,0 +1,3 @@
+﻿  CircleMain.cpp
+C:\Users\a3210\source\repos\HW1Q3\HW1Q3\Circle.h(4,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+  HW1Q3.vcxproj -> C:\Users\a3210\source\repos\HW1Q3\Debug\HW1Q3.exe

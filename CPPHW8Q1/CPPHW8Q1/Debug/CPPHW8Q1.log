@@ -1,0 +1,12 @@
+﻿  StackMain.cpp
+C:\Users\a3210\source\repos\CPPHW8Q1\CPPHW8Q1\StackMain.cpp(67,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\a3210\source\repos\CPPHW8Q1\CPPHW8Q1\StackMain.cpp(111,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\a3210\source\repos\CPPHW8Q1\CPPHW8Q1\StackMain.cpp(120,12): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\Users\a3210\source\repos\CPPHW8Q1\CPPHW8Q1\StackMain.cpp(105): warning C4172: returning address of local variable or temporary: result
+C:\Users\a3210\source\repos\CPPHW8Q1\CPPHW8Q1\ListTemplate.h(195): warning C4715: 'List<float>::firstElement': not all control paths return a value
+C:\Users\a3210\source\repos\CPPHW8Q1\CPPHW8Q1\ListTemplate.h(195): warning C4715: 'List<char>::firstElement': not all control paths return a value
+  CPPHW8Q1.vcxproj -> C:\Users\a3210\source\repos\CPPHW8Q1\Debug\CPPHW8Q1.exe

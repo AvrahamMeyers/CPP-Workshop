@@ -1,0 +1,14 @@
+﻿  Shape.cpp
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(5,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(93,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(94,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(95,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(108,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(109,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(110,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(111,29): warning C4805: '==': unsafe mix of type 'bool' and type 'float' in operation
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(129,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(130,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(147,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+C:\Users\a3210\source\repos\CPPHW7Q1\CPPHW7Q1\Shape.cpp(148,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  CPPHW7Q1.vcxproj -> C:\Users\a3210\source\repos\CPPHW7Q1\Debug\CPPHW7Q1.exe
