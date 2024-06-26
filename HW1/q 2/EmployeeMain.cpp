@@ -8,27 +8,26 @@ Homework 1 Question 2
 Avraham Meyers
 Created on 3.9.21 and Modified on 3.10.21
 */
-
 #include "Employee.h"
 #include <iostream>
 #include <cstring>
-using namespace std;
+
 
 void fillEmployee(Employee& E, int entrySSN);
 // given an Employee and the SSN that was entered for the employee,
 // reads in the rest of the information for the employee from the console
 void copyEmployee(Employee& source, Employee& destination);
 //given two employees, copys the values from the source Employee
-// to the cestination Employee
+// to the destination Employee
 
 int main() {
-	cout << "enter details, to end enter 0:\n";
+	std::cout << "enter details, to end enter 0:\n";
 	Employee entry, highest_Salary, least_Collected; //declaring three Employees
 	// to hold the information for the employee who collected the least, earned the highest
 	// salary, and the entry from the user
 	
 	int entrySSN;
-	cin >> entrySSN;
+	std::cin >> entrySSN;
 
 	fillEmployee(entry, entrySSN);
 	copyEmployee(entry, highest_Salary);
@@ -38,10 +37,10 @@ int main() {
 			entry.get_Wage() < 1 ||
 			entry.get_Amount() < 1) {
 
-			cout << "ERROR\n";
+			std::cout << "ERROR\n";
 		}
 
-	cin >> entrySSN; //reading in the next employee SSN from the console
+	std::cin >> entrySSN; //reading in the next employee SSN from the console
 	while (entrySSN != 0) {
 		
 		fillEmployee(entry, entrySSN);
@@ -50,8 +49,8 @@ int main() {
 			entry.get_Wage() < 1 ||
 			entry.get_Amount() < 1) {
 
-			cout << "ERROR\n";
-			cin >> entrySSN;
+			std::cout << "ERROR\n";
+			std::cin >> entrySSN;
 			continue;
 		}
 
@@ -61,14 +60,14 @@ int main() {
 		if (entry.total_Salary() > highest_Salary.total_Salary())
 			copyEmployee(entry, highest_Salary);
 
-		cin >> entrySSN;
+		std::cin >> entrySSN;
 	} 
 
-	cout << "minimum sum: " << least_Collected.get_Amount() << ' ' 
+	std::cout << "minimum sum: " << least_Collected.get_Amount() << ' ' 
 		<< least_Collected.get_Name() << ' '
-		<< least_Collected.getSSN() << endl;
+		<< least_Collected.getSSN() << std::endl;
 
-	cout << "highest salary: " << highest_Salary.total_Salary() << ' '
+	std::cout << "highest salary: " << highest_Salary.total_Salary() << ' '
 		<< highest_Salary.get_Name() << ' '
 		<< highest_Salary.getSSN();
 
@@ -81,8 +80,8 @@ void fillEmployee(Employee& E, int entrySSN) {
 	int hours_worked;
 	char name[21];
 	float hourly_wage, amount_collected;
-	cin >> name;
-	cin >> hourly_wage >> hours_worked >> amount_collected;
+	std::cin >> name;
+	std::cin >> hourly_wage >> hours_worked >> amount_collected;
 
 	
 

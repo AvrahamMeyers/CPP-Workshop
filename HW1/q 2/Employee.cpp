@@ -1,5 +1,6 @@
 #include "Employee.h"
 #include <cstring>
+#include <string>
 
 void Employee::set_Name(char* name) {
 	strcpy_s(Name, name);
