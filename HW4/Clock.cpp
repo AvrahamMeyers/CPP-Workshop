@@ -1,6 +1,5 @@
 #include "Clock.h"
 #include <iostream>
-using namespace std;
 
 Clock::Clock(int hour, int minute, int seconds) {
 	try {
@@ -18,7 +17,7 @@ Clock::Clock(int hour, int minute, int seconds) {
 			throw "negative number of seconds\n";
 	}
 	catch (char* errorMessage) {
-		cout << "Invalid time - " << errorMessage;
+		std::cout << "Invalid time - " << errorMessage;
 	}
 	Clock(0, 0, 0);
 }
@@ -39,7 +38,7 @@ void Clock::operator+=(int seconds) {
 	}
 }
 
-ostream& operator<<(ostream& out, const Clock& C) {	
+std::ostream& operator<<(std::ostream& out, const Clock& C) {	
 	
 	(C.hour < 10) ? out << '0' << C.hour : out << C.hour;
 	out << ':';
@@ -50,7 +49,7 @@ ostream& operator<<(ostream& out, const Clock& C) {
 	return out;
 }
 
-istream& operator>>(istream& in, Clock& C) {
+std::istream& operator>>(std::istream& in, Clock& C) {
 	char skip;
 	in >> C.hour >> skip >> C.minute >> skip >> C.seconds;
 	try {
@@ -68,7 +67,7 @@ istream& operator>>(istream& in, Clock& C) {
 			throw "negative number of seconds\n";
 	}
 	catch (char* errorMessage) {
-		cout << "Invalid time - " << errorMessage;
+		std::cout << "Invalid time - " << errorMessage;
 	}
 	return in;
 }

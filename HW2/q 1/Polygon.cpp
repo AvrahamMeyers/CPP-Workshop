@@ -1,12 +1,11 @@
 #include "Polygon.h"
 #include <cmath>
 #include <iostream>
-using namespace std;
 
 Polygon::Polygon(int number_of_vertices) {
 	vertexcount = number_of_vertices;
 	vertices = new Point[vertexcount];//dynamically allocating a new array with the size of the number of vertices
-	cout << "in constructor\n";
+	std::cout << "in constructor\n";
 };
 
 Polygon::Polygon(const Polygon& other) {
@@ -18,12 +17,12 @@ Polygon::Polygon(const Polygon& other) {
 		this->vertices[i] = other.vertices[i]; //copying the values for the vertices from 
 	}										// the other polygon to this polygon
 
-	cout << "in copy-constructor\n";
+	std::cout << "in copy-constructor\n";
 }
 
 Polygon::~Polygon() {
 	delete[] this->vertices;
-	cout << "in destructor\n";
+	std::cout << "in destructor\n";
 }
 
 void Polygon::addPoint(Point vertex, int index) {

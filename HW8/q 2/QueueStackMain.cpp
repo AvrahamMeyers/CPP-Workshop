@@ -9,7 +9,8 @@ Created and Modified on 20.5.21
 
 #include <iostream>
 #include "QueueStack.h"
-using namespace std;
+
+
 int main() {
 	Queue* Q;
 	Q = new QueueStack();
@@ -19,16 +20,16 @@ int main() {
 	}
 	catch (const char* msg)
 	{
-		cout << msg;
+		std::cout << msg;
 	}
-	cout << "first on Q is: " << Q->front() << endl;
-	cout << "take out 2 elements:" << endl;
-	cout << Q->dequeue() << ' ' << Q->dequeue() << endl;
-	cout << "first on Q is: " << Q->front() << endl;
+	std::cout << "first on Q is: " << Q->front() << std::endl;
+	std::cout << "take out 2 elements:" << std::endl;
+	std::cout << Q->dequeue() << ' ' << Q->dequeue() << std::endl;
+	std::cout << "first on Q is: " << Q->front() << std::endl;
 	Q->enqueue(8);
 	Q->enqueue(9);
 	while (!Q->isEmpty())
-		cout << Q->dequeue() << " ";
+		std::cout << Q->dequeue() << " ";
 	return 0;
 }
 

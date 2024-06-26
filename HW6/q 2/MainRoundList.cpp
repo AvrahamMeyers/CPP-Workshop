@@ -9,7 +9,7 @@ Created and Modified on 5.5.21
 
 #include "RoundList.h"
 #include <iostream>
-using namespace std;
+
 
 enum CHOICES {
 	EXIT, ADD, ADD_TO_END, REMOVE_FIRST, SEARCH, CLEAR, EMPTY
@@ -18,52 +18,52 @@ int main() {
 
 	RoundList ls1;
 	int choice;
-	cout << "Enter your choice: ";
-	cin >> choice;
+	std::cout << "Enter your choice: ";
+	std::cin >> choice;
 	while (choice != EXIT)
 	{
 		int num;
 		switch (choice) {
-		case ADD: 	cout << "Enter 5 numbers: ";
+		case ADD: 	std::cout << "Enter 5 numbers: ";
 			for (int i = 0; i < 5; i++)
 			{
-				cin >> num;
+				std::cin >> num;
 				ls1.add(num);
 			}
 			break;
 
-		case ADD_TO_END:cout << "Enter 5 numbers: ";
+		case ADD_TO_END:std::cout << "Enter 5 numbers: ";
 			for (int i = 0; i < 5; i++)
 			{
-				cin >> num;
+				std::cin >> num;
 				ls1.AddtoEnd(num);
 			}
 			break;
 
 		case REMOVE_FIRST: try { ls1.removeFirst(); }
 						 catch (const char* Msg) {
-							 cout << Msg << endl;
+							 std::cout << Msg << std::endl;
 						 }
 			break;
 
-		case SEARCH: cout << "Enter a number: ";
-			cin >> num;
-			cout << ls1.search(num) << endl;
+		case SEARCH: std::cout << "Enter a number: ";
+			std::cin >> num;
+			std::cout << ls1.search(num) << std::endl;
 			break;
 
 		case CLEAR: ls1.clear();
 			break;
 
 		case EMPTY: if (ls1.isEmpty())
-			cout << "Empty" << endl;
+			std::cout << "Empty" << std::endl;
 				  else
-			cout << "Not empty" << endl;
+			std::cout << "Not empty" << std::endl;
 			break;
 
-		default: cout << "ERROR!" << endl;
+		default: std::cout << "ERROR!" << std::endl;
 		}
-		cout << "Enter your choice: ";
-		cin >> choice;
+		std::cout << "Enter your choice: ";
+		std::cin >> choice;
 	}
 	return 0;
 }

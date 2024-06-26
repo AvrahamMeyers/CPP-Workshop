@@ -10,7 +10,8 @@ Created on 5.4.21 and Modified on 5.5.21
 #include "FullTime.h"
 #include "PartTime.h"
 #include <iostream>
-using namespace std;
+
+
 int main()
 {
 	FullTime arrF[3];
@@ -18,11 +19,11 @@ int main()
 	{
 		try
 		{
-			cin >> arrF[i];
+			std::cin >> arrF[i];
 		}
 		catch (const char* str)
 		{
-			cout << str << endl;
+			std::cout << str << std::endl;
 			i--;
 		}
 	}
@@ -33,11 +34,11 @@ int main()
 	{
 		try
 		{
-			cin >> arrP[i];
+			std::cin >> arrP[i];
 		}
 		catch (const char* str)
 		{
-			cout << str << endl;
+			std::cout << str << std::endl;
 			i--;
 		}
 	}
@@ -45,15 +46,15 @@ int main()
 
 	for (int i = 0; i < 3; i++)
 	{
-		cout << arrF[i];
-		cout << "After Bonus: " << arrF[i].SalaryAfterBonus() << endl;
+		std::cout << arrF[i];
+		std::cout << "After Bonus: " << arrF[i].SalaryAfterBonus() << std::endl;
 	}
 
 
 	for (int i = 0; i < 3; i++)
 	{
-		cout << arrP[i];
-		cout << "After Bonus: " << arrP[i].SalaryAfterBonus() << endl;
+		std::cout << arrP[i];
+		std::cout << "After Bonus: " << arrP[i].SalaryAfterBonus() << std::endl;
 	}
 	return 0;
 }

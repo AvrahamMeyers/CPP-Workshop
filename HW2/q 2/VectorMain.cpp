@@ -9,11 +9,12 @@ Created and Modified on 3.17.21
 
 #include "Vector.h"
 #include <iostream>
-using namespace std;
+
 enum options
 {
 	stop, assignment, isEqual, mult, add, clear, delLast, at, insert
 };
+
 int main()
 {
 	Vector  v1(10), v2(10), v3;
@@ -23,17 +24,17 @@ int main()
 		v2.insert(i + 4);
 	}
 	int choice, val, index;
-	cout << "enter your choice 0-8:\n";
-	cin >> choice;
+	std::cout << "enter your choice 0-8:\n";
+	std::cin >> choice;
 	while (choice)
 	{
 		switch (choice)
 		{
 		case assignment: v3.assign(v1);
 			break;
-		case isEqual:	if (v1.isEqual(v2)) cout << "v1==v2\n"; else cout << "v1!=v2\n";
+		case isEqual:	if (v1.isEqual(v2)) std::cout << "v1==v2\n"; else std::cout << "v1!=v2\n";
 			break;
-		case mult:		cout << "v1*v2=" << v1.strcatcat(v2) << endl;
+		case mult:		std::cout << "v1*v2=" << v1.strcatcat(v2) << std::endl;
 			break;
 		case add:		v3.assign(v1.strnewcat(v2));
 			break;
@@ -41,15 +42,15 @@ int main()
 			break;
 		case delLast:	       v2.delLast();
 			break;
-		case at:		cout << "enter index:" << endl; cin >> index; cout << "enter value:" << endl; cin >> val; v3.at(index) = val;
+		case at:		std::cout << "enter index:" << std::endl; std::cin >> index; std::cout << "enter value:" << std::endl; std::cin >> val; v3.at(index) = val;
 			break;
-		case insert:	cout << "enter value:" << endl; cin >> val; v3.insert(val);
+		case insert:	std::cout << "enter value:" << std::endl; std::cin >> val; v3.insert(val);
 			break;
-		default: cout << "ERROR";
+		default: std::cout << "ERROR";
 		}
 		v1.print();		v2.print();		v3.print();
-		cout << "enter your choice 0-8:\n";
-		cin >> choice;
+		std::cout << "enter your choice 0-8:\n";
+		std::cin >> choice;
 	}
 	return 0;
 }

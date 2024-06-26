@@ -1,6 +1,5 @@
 #include "Date.h"
 #include <iostream>
-using namespace std;
 
 Date Date::operator++() {//pre auto
 	if (this->day == 30) {//if the number of days is 30 then 
@@ -121,9 +120,9 @@ void Date::setDate(int day, int month, int year) {
 void Date::print() {
 	/*if (day < 10)
 		cout << '0';*/
-	cout << day << '/';
+	std::cout << day << '/';
 	/*if (month < 10)
 		cout << '0';*/
-	cout << month << '/';
-	cout << year << endl;
+	std::cout << month << '/';
+	std::cout << year << endl;
 }

@@ -11,33 +11,32 @@ Created and Modified on 4.7.21
 #include <iostream>
 #include <cstring>
 #include "String.h"
-using namespace std;
 
 int main() {
 	char* firstword = new char[80], * secondword = new char[80];
 
-	cin >> firstword >> secondword;
+	std::cin >> firstword >> secondword;
 	String word1(firstword), word2(secondword);
 
 	int num;
-	cin >> num;
+	std::cin >> num;
 
 	if (word1 < word2)//checking if word1 is less than or greater than word2
-		cout << "a<b\n";
+		std::cout << "a<b\n";
 	else if (word1 > word2)
-		cout << "a>b\n";
+		std::cout << "a>b\n";
 	else
-		cout << "a=b\n";//if it is neither less than or greater than, then they must be equal
+		std::cout << "a=b\n";//if it is neither less than or greater than, then they must be equal
 
 	String combo = word2.insert(num, firstword);
 	combo.Print();
 
 	int i;
 	char c;
-	cin >> c >> i;
+	std::cin >> c >> i;
 
 	if (i >= combo.getLen()) {//if the index entered is not within the bounds of the string 
-		cout << "ERROR\n"; //print error
+		std::cout << "ERROR\n"; //print error
 		return 0;
 	}
 	combo[i] = c;

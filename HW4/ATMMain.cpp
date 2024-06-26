@@ -11,7 +11,6 @@ Created on 4.10.21 and Modified on 4.20.21
 #include "Clock.h"
 #include "Account.h"
 
-using namespace std;
 
 float Account::sumDeposit = 0;
 float Account::sumWithdraw = 0;
@@ -27,28 +26,28 @@ enum action
 };
 action menu()
 {
-	cout << "enter 1 to get account balance" << endl;
-	cout << "enter 2 to deposit money" << endl;
-	cout << "enter 3 to withdraw money" << endl;
-	cout << "enter 4 to see the sum of all withdraws" << endl;
-	cout << "enter 5 to see the sum of all Deposits" << endl;
-	cout << "enter 0 to stop" << endl;
+	std::cout << "enter 1 to get account balance" << std::endl;
+	std::cout << "enter 2 to deposit money" << std::endl;
+	std::cout << "enter 3 to withdraw money" << std::endl;
+	std::cout << "enter 4 to see the sum of all withdraws" << std::endl;
+	std::cout << "enter 5 to see the sum of all Deposits" << std::endl;
+	std::cout << "enter 0 to stop" << std::endl;
 	int x;
-	cin >> x;
+	std::cin >> x;
 	return (action)x;
 }
 int findAccount(Account* bank, int size)
 {
 	int number, code;
-	cout << "please enter account number: ";
-	cin >> number;
+	std::cout << "please enter account number: ";
+	std::cin >> number;
 	if (number < 1 || number > 10)
 		throw "ERROR: no such account number!\n";
 	int i = 0;
 	while (i < size && bank[i].getAccountNumber() != number)
 		i++;
-	cout << "please enter the code: ";
-	cin >> code;
+	std::cout << "please enter the code: ";
+	std::cin >> code;
 	if (bank[i].getCode() == code)
 		return i;
 	else
@@ -56,22 +55,22 @@ int findAccount(Account* bank, int size)
 }
 void printTransaction(Account a, action ac, Clock& c)
 {
-	cout << c << "\t";
+	std::cout << c << "\t";
 	;
 	switch (ac)
 	{
-	case balance: cout << "account #: " << a.getAccountNumber() << "\t";
-		cout << "balance: " << a.getBalance() << endl;
+	case balance: std::cout << "account #: " << a.getAccountNumber() << "\t";
+		std::cout << "balance: " << a.getBalance() << std::endl;
 		break;
 	case deposit:
-	case withdraw: cout << "account #: " << a.getAccountNumber() << "\t";
-		cout << "new balance: " << a.getBalance() << endl;
+	case withdraw: std::cout << "account #: " << a.getAccountNumber() << "\t";
+		std::cout << "new balance: " << a.getBalance() << std::endl;
 		break;
 	case sumDeposit:
-		cout << "sum of all deposits: " << Account::getSumDeposit() << endl;
+		std::cout << "sum of all deposits: " << Account::getSumDeposit() << std::endl;
 		break;
 	case sumWithdraw:
-		cout << "sum of all withdraws: " << Account::getSumWithdraw() << endl;
+		std::cout << "sum of all withdraws: " << Account::getSumWithdraw() << std::endl;
 		break;
 	}
 }
@@ -85,8 +84,8 @@ void cashDeposit(Account* bank, int size, Clock& c)
 {
 	int i = findAccount(bank, size);
 	float amount;
-	cout << "enter the amount of the check: ";
-	cin >> amount;
+	std::cout << "enter the amount of the check: ";
+	std::cin >> amount;
 	bank[i].deposit(amount);
 	c += 30;
 	printTransaction(bank[i], deposit, c);
@@ -95,8 +94,8 @@ void cashWithdraw(Account* bank, int size, Clock& c)
 {
 	int i = findAccount(bank, size);
 	float amount;
-	cout << "enter the amount of money to withdraw: ";
-	cin >> amount;
+	std::cout << "enter the amount of money to withdraw: ";
+	std::cin >> amount;
 	bank[i].withdraw(amount);
 	c += 50;
 	printTransaction(bank[i], withdraw, c);
@@ -106,11 +105,11 @@ int main()
 {
 	Clock c(8);
 	Account bank[10];
-	cout << "enter account number and code for 10 accounts:\n";
+	std::cout << "enter account number and code for 10 accounts:\n";
 	for (int i = 0; i < 10; i++)
 	{
 		try {
-			cin >> bank[i];
+			std::cin >> bank[i];
 			for (int j = 0; j < i; j++) 
 				if (bank[i].getAccountNumber() == bank[j].getAccountNumber())
 					throw "ERROR: account number must be unique!\n";
@@ -145,7 +144,7 @@ int main()
 		}
 		catch (const char* msg)
 		{
-			cout << c << '\t' << msg;
+			std::cout << c << '\t' << msg;
 			i--;
 		}
 	}
@@ -156,17 +155,17 @@ int main()
 		{
 		case balance: try { getBalance(bank, 10, c); }
 					catch (const char* ErrorMessage) {
-						cout << c << '\t' << ErrorMessage;
+						std::cout << c << '\t' << ErrorMessage;
 					}
 			break;
 		case withdraw: try { cashWithdraw(bank, 10, c); }
 					 catch (const char* ErrorMessage) {
-						 cout << c << '\t' << ErrorMessage;
+						 std::cout << c << '\t' << ErrorMessage;
 					 }
 					 break;
 		case deposit: try { cashDeposit(bank, 10, c); }
 					catch (const char* ErrorMessage) {
-						cout << c << '\t' << ErrorMessage;
+						std::cout << c << '\t' << ErrorMessage;
 					}
 					break;
 		case sumDeposit:c += 60;

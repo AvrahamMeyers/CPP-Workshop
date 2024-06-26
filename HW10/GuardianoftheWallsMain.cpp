@@ -4,7 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <string>
-using namespace std;
+
 
 enum option {
 	stop,	//	End program
@@ -25,8 +25,8 @@ int main() {
 	std::vector<Soldier*> V;
 
 	int op;
-	cout << "enter 0-7\n";
-	cin >> op;
+	std::cout << "enter 0-7\n";
+	std::cin >> op;
 	while (op != stop)
 	{
 		switch (op)
@@ -37,27 +37,27 @@ int main() {
 			break;
 		case mostSociometric: {
 			Soldier* s = mostSociometricScore(V);
-			cout << "Officer soldier with most sociometric score: ";
-			cout << s->getFirstName() << ' ' << s->getLastName() << endl;
+			std::cout << "Officer soldier with most sociometric score: ";
+			std::cout << s->getFirstName() << ' ' << s->getLastName() << std::endl;
 			break; }
 		case countMedalPrivate:
-			cout << "# private soldier for medal: ";
-			cout << std::count_if(V.begin(), V.end(), 
+			std::cout << "# private soldier for medal: ";
+			std::cout << std::count_if(V.begin(), V.end(), 
 				[](Soldier* S) {if (S->SoldierType() == "private") return S->Medal(); });
-			cout << endl;
+			std::cout << std::endl;
 			break;
 		case noCombatCommander:
-			cout << "list of no combat commander soldier :";
+			std::cout << "list of no combat commander soldier :";
 				std::for_each(V.begin(), V.end(),
 					[](Soldier* S) {if (S->SoldierType() == "commander" && S->getCombat() == false) 
 					std::cout << S->getFirstName() << ' ' << S->getLastName() << ' '; });
-			cout << endl;
+			std::cout << std::endl;
 			break;
 		case overSoldier:
 			if (std::any_of(V.begin(), V.end(), [](Soldier* S) {return S->getOperationCount() >= 15; }))
-				cout << "there is a soldier that takes more than 15 operations\n";
+				std::cout << "there is a soldier that takes more than 15 operations\n";
 			else
-				cout << "no soldier takes more than 15 operations\n";
+				std::cout << "no soldier takes more than 15 operations\n";
 			break;
 		case removeOfficer:
 			std::remove_if(V.begin(), V.end(), 
@@ -65,30 +65,30 @@ int main() {
 			std::for_each(V.begin(), V.end(), [](Soldier* S) {S->print(); });
 			break;
 		};
-		cout << "enter 0-7\n";
-		cin >> op;
+		std::cout << "enter 0-7\n";
+		std::cin >> op;
 	}
 	return 0;
 }
 
 void add(std::vector<Soldier*>& V) {
-	cout << "enter 1 to add a private soldier\n";
-	cout << "enter 2 to add a commander soldier\n";
-	cout << "enter 3 to add a officer soldier\n";
+	std::cout << "enter 1 to add a private soldier\n";
+	std::cout << "enter 2 to add a commander soldier\n";
+	std::cout << "enter 3 to add a officer soldier\n";
 	int entry;
-	cin >> entry;
-	cout << "enter id, first name, last name and number Of operations\n";
+	std::cin >> entry;
+	std::cout << "enter id, first name, last name and number Of operations\n";
 	int ID, NumofOps;
 	std::string FirstName, LastName;
-	cin >> ID >> FirstName >> LastName >> NumofOps;
+	std::cin >> ID >> FirstName >> LastName >> NumofOps;
 	switch (entry) {
 		case 1: {
 			std::vector<int> scores;
 			if (NumofOps > 0) {
-				cout << "enter " << NumofOps << " grades\n";
+				std::cout << "enter " << NumofOps << " grades\n";
 				int score;
 				for (int i = 0; i < NumofOps; i++) {
-					cin >> score;
+					std::cin >> score;
 					scores.push_back(score);
 				}
 			}
@@ -98,23 +98,23 @@ void add(std::vector<Soldier*>& V) {
 		case 2: {
 			std::vector<int> scores;
 			if (NumofOps > 0) {
-				cout << "enter " << NumofOps << " grades\n";
+				std::cout << "enter " << NumofOps << " grades\n";
 				int score;
 				for (int i = 0; i < NumofOps; i++) {
-					cin >> score;
+					std::cin >> score;
 					scores.push_back(score);
 				}
 			}
-			cout << "enter 1 if the soldier is combat and 0 if not\n";
+			std::cout << "enter 1 if the soldier is combat and 0 if not\n";
 			bool Combat;
-			cin >> Combat;
+			std::cin >> Combat;
 			V.push_back(new Commander(ID, FirstName, LastName, NumofOps, scores, Combat));
 			break;
 		}
 		case 3: {
-			cout << "enter number of sociometric score\n";
+			std::cout << "enter number of sociometric score\n";
 			int socio;
-			cin >> socio;
+			std::cin >> socio;
 			V.push_back(new Officer(ID, FirstName, LastName, NumofOps, socio));
 			break;
 		}

@@ -9,15 +9,14 @@ Created and Modified on 3.24.21
 
 #include "Date.h"
 #include <iostream>
-using namespace std;
 
 enum{NewDate = 1, PreInc, PostInc, AddDays, Greater, LessThan, Equal};
 
 int main() {
-	cout << "Enter a date:\n";
+	std::cout << "Enter a date:\n";
 	char letter;
 	int day, month, year;
-	cin >> day >> letter
+	std::cin >> day >> letter
 		>> month >> letter
 		>> year;
 	Date Date1(day, month, year);
@@ -25,16 +24,16 @@ int main() {
 	Date1.print();
 
 	int input;
-	cout << "Enter an action code\n";
-	cin >> input;
+	std::cout << "Enter an action code\n";
+	std::cin >> input;
 
 	while (input != -1) {
 		switch (input) {
 			case NewDate: {
-				cout << "Enter a date:\n";
+				std::cout << "Enter a date:\n";
 				char letter;
 				int day, month, year;
-				cin >> day >> letter
+				std::cin >> day >> letter
 					>> month >> letter
 					>> year;
 				Date1.setDate(day, month, year);
@@ -53,57 +52,57 @@ int main() {
 			}
 
 			case AddDays: {
-				cout << "enter #days\n";
+				std::cout << "enter #days\n";
 				int days;
-				cin >> days;
+				std::cin >> days;
 				(Date1 += days).print();
 				break;
 			}
 
 			case Greater: {
-				cout << "Enter a date:\n";
+				std::cout << "Enter a date:\n";
 				char letter;
 				int day, month, year;
-				cin >> day >> letter
+				std::cin >> day >> letter
 					>> month >> letter
 					>> year;
 				Date Date2(day, month, year);
 
-				cout << ">: ";
-				Date1 > Date2 ? cout << "true\n" : cout << "false\n";
+				std::cout << ">: ";
+				Date1 > Date2 ? std::cout << "true\n" : std::cout << "false\n";
 				break;
 			}
 
 			case LessThan: {
-				cout << "Enter a date:\n";
+				std::cout << "Enter a date:\n";
 				char letter;
 				int day, month, year;
-				cin >> day >> letter
+				std::cin >> day >> letter
 					>> month >> letter
 					>> year;
 				Date Date2(day, month, year);
 
-				cout << "<: ";
-				Date1 < Date2 ? cout << "true\n" : cout << "false\n";
+				std::cout << "<: ";
+				Date1 < Date2 ? std::cout << "true\n" : std::cout << "false\n";
 				break;
 			}
 
 			case Equal: {
-				cout << "Enter a date:\n";
+				std::cout << "Enter a date:\n";
 				char letter;
 				int day, month, year;
-				cin >> day >> letter
+				std::cin >> day >> letter
 					>> month >> letter
 					>> year;
 				Date Date2(day, month, year);
 
-				cout << "==: ";
-				Date1 == Date2 ? cout << "true\n" : cout << "false\n";
+				std::cout << "==: ";
+				Date1 == Date2 ? std::cout << "true\n" : std::cout << "false\n";
 				break;
 			}
 		}
-	cout << "Enter an action code\n";
-	cin >> input;
+	std::cout << "Enter an action code\n";
+	std::cin >> input;
 	}
 
 	return 0;

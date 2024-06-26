@@ -1,14 +1,13 @@
 #include "Vector.h"
 #include <iostream>
-using namespace std;
 
 void Vector::print() {
-	cout << "capacity: " << this->capacity << ' '
+	std::cout << "capacity: " << this->capacity << ' '
 		<< "size: " << this->size << ' '
 		<< "values: ";
 	for (int i = 0; i < this->size; i++)
-		cout << this->data[i] << ' ';
-	cout << endl;
+		std::cout << this->data[i] << ' ';
+	std::cout << std::endl;
 }
 
 bool Vector::isEqual(Vector& V) {
@@ -24,7 +23,7 @@ bool Vector::isEqual(Vector& V) {
 
 int Vector::strcatcat(Vector& V) {
 	if (this->size != V.size) {
-		cout << "ERROR\n";
+		std::cout << "ERROR\n";
 		return -1;
 	}
 
@@ -37,7 +36,7 @@ int Vector::strcatcat(Vector& V) {
 
 int& Vector::at(int index) {	
 	if (index >= this->capacity || index < 0) {
-		cout << "ERROR\n";
+		std::cout << "ERROR\n";
 		return *this->data; 
 	}
 
@@ -92,7 +91,7 @@ void Vector::clear() {
 
 void Vector::delLast() {
 	if (this->size == 0) {
-		cout << "ERROR\n";
+		std::cout << "ERROR\n";
 		return;
 	}
 

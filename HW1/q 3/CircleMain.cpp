@@ -10,7 +10,6 @@ Created and Modified on 3.9.21
 
 #include <iostream>
 #include "Circle.h"
-using namespace std;
 
 void setCircle(Circle& c);
 //given a Circle, sets the values that are entered on the console as the values for the Circle
@@ -20,22 +19,22 @@ void setPoint(Point& p);
 int main() {
 	Circle A, B, C;
 
-	cout << "enter the center point and radius of 3 circles:\n";
+	std::cout << "enter the center point and radius of 3 circles:\n";
 	
 	setCircle(A);
 	setCircle(B);
 	setCircle(C);
 
-	cout << "perimeter:\t"
+	std::cout << "perimeter:\t"
 		<< "A: " << A.Circumference() << '\t'
 		<< "B: " << B.Circumference() << '\t'
-		<< "C: " << C.Circumference() << endl;
-	cout << "area:\t"
+		<< "C: " << C.Circumference() << std::endl;
+	std::cout << "area:\t"
 		<< "A: " << A.Area() << '\t'
 		<< "B: " << B.Area() << '\t'
-		<< "C: " << C.Area() << endl;
+		<< "C: " << C.Area() << std::endl;
 
-	cout << "enter points until (0,0):\n";
+	std::cout << "enter points until (0,0):\n";
 
 	int onA(0), onB(0), onC(0);
 
@@ -53,10 +52,10 @@ int main() {
 		setPoint(p);
 	}
 
-	cout << "num of points in circle:\t"
+	std::cout << "num of points in circle:\t"
 		<< "A:" << onA << '\t'
 		<< "B:" << onB << '\t'
-		<< "C:" << onC << endl;
+		<< "C:" << onC << std::endl;
 
 	return 0;
 }
@@ -64,7 +63,7 @@ int main() {
 void setCircle(Circle& c) {
 	char skip;
 	int x, y, radius;
-	cin >> skip >> x >> skip //using a char to skip the parentheses and comma
+	std::cin >> skip >> x >> skip //using a char to skip the parentheses and comma
 		>> y >> skip >> radius;
 
 	c.setcenter(x, y);
@@ -74,7 +73,7 @@ void setCircle(Circle& c) {
 void setPoint(Point& p) {
 	char skip;
 	int x, y;
-	cin >> skip >> x
+	std::cin >> skip >> x
 		>> skip >> y
 		>> skip;
 	p.setX(x);

@@ -1,10 +1,9 @@
 #include "String.h"
 #include <cstring>
 #include <iostream>
-using namespace std;
 
 void String::Print() {
-	cout << this->data << endl;
+	std::cout << this->data << std::endl;
 }
 
 String::String(const char* p) {//constructor
@@ -68,7 +67,7 @@ char& String::operator[](int x) {
 
 String String::insert(int index, const char* s) {
 	if (index > this->len) {
-		cout << "ERROR\n";
+		std::cout << "ERROR\n";
 		String empty;
 		return empty;
 	}
