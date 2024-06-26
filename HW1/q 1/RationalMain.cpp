@@ -8,7 +8,7 @@ Created and Modified on 3.8.21
 
 #include"Rational.h"
 #include <iostream>
-//using namespace std;
+
 
 int main()
 {
